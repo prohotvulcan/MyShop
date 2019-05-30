@@ -53,6 +53,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201905301007404_initialDB.cs" />
+    <Compile Include="Migrations\201905301007404_initialDB.Designer.cs">
+      <DependentUpon>201905301007404_initialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,7 +77,18 @@
       <Project>{90128ec3-2811-46e0-b81f-63ad46cd24df}</Project>
       <Name>MyShop.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyShop.Model\MyShop.Model.csproj">
+      <Project>{461677f2-f0f2-48d2-a3b6-587d55f47795}</Project>
+      <Name>MyShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Respositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905301007404_initialDB.resx">
+      <DependentUpon>201905301007404_initialDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

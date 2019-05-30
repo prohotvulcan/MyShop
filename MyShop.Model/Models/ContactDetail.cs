@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MyShop.Data.Models
 {
     [Table("ContactDetails")]
-    class ContactDetail
+    public class ContactDetail
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
