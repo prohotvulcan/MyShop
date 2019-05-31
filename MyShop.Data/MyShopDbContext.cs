@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace MyShop.Data
 {
-    public class MyShopDbContext : DbContext
+    public class MyShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public MyShopDbContext() : base("MyShopConnection")
         {
