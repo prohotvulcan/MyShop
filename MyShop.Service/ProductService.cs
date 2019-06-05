@@ -44,6 +44,7 @@ namespace MyShop.Service
             this._unitOfWork = unitOfWork;
             this._productRepository = productRepository;
             this._productTagRepository = productTagRepository;
+            this._tagRepository = tagRepository;
         }
 
         public Product Add(Product product)
